@@ -2,11 +2,11 @@
     <div class="userinfo">
         <div class="miniw">
             <div class="leftmenu">
-                <userleft></userleft>
+                <userleft :defaultactive="defaultactive"></userleft>
             </div>
             <div class="rightbox">
                 <div class="menutop">
-                    <menutree></menutree>
+                    <menutree :thistitle="titlename"></menutree>
                 </div>
 
                 <div class="mainbox">
@@ -62,6 +62,8 @@
                     sex: '',
                     birth: ''
                 },
+                defaultactive:'1-1',
+                titlename:'个人资料',
                 rules: {
                     name: [
                         {required: true, message: '请输入真实姓名', trigger: 'blur'},
@@ -100,24 +102,11 @@
 </script>
 
 <style lang="scss">
-    .el-submenu .el-menu-item{
-        min-width:auto;
-    }
-    .leftmenu{
-        width:180px;
-        float:left;
-    }
-    .el-menu-item-group__title{
-        display:none;
-    }
     .rightbox{
         float:left;
         padding-left:50px;
         border-left: solid 1px #e6e6e6;
         margin-left:-1px;
-    }
-    .menutop span{
-        line-height:56px;
     }
     .personaldata{
         max-width:560px;

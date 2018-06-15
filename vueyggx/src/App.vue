@@ -7,7 +7,7 @@
         </div>
         <div class="menu">
           <ul>
-            <li><a href="#">用户管理</a></li>
+            <li><router-link to="/userinfo">用户管理</router-link></li>
             <li><a href="#">新零售商中心</a></li>
             <li><a href="#">供货商中心</a></li>
           </ul>
@@ -36,7 +36,6 @@ export default {
 *{margin:0;padding:0;border:0;}
 ul,li{list-style: none; font-weight:normal;}
 a{text-decoration:none;}
-$--color-primary: #f60;
 
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -47,6 +46,7 @@ $--color-primary: #f60;
 }
 .miniw{
   max-width:1200px;
+  min-width:800px;
   margin:0 auto;
 }
 .usertop{
@@ -98,6 +98,10 @@ $--color-primary: #f60;
       }
     }
   }
+a.router-link-active{
+  background:#fff;
+  color:#ff6537;
+}
   .userright{
     ul{
       li{
